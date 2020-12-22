@@ -5,6 +5,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,56 +13,80 @@ public class ProductListActivity extends AppCompatActivity {
 
     //initialize variable
     DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_list);
-
+        //assign variable
         drawerLayout = findViewById(R.id.drawer_layout);
     }
-
-    public void ClickMenu(){
-       openDrawer(drawerLayout);
+    public void ClickMenu(View view){
+        // open Drawer
+        openDrawer(drawerLayout);
     }
 
-    private static void openDrawer(DrawerLayout drawerLayout) {
+    public static void openDrawer(DrawerLayout drawerLayout) {
         //open drawer layout
         drawerLayout.openDrawer(GravityCompat.START);
     }
-    public void clickLogo(){
+    public void ClickLogo(View view){
         closeDrawer(drawerLayout);
     }
 
-    private static void closeDrawer(DrawerLayout drawerLayout) {
-        //close drawer layout
+    public static void closeDrawer(DrawerLayout drawerLayout) {
+        // close Drawer
+        //check if drawer is open
+        try {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                //when drawer is open
+                //close drawer
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
+        }
+        catch (IllegalStateException e){
 
-        //check condition
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
-            //when drawer is open
-            //close drawer
-            drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
     public void ClickHome(View view){
+        //recraete activity
         recreate();
     }
     public void ClickMyAccount(View view){
-        redirectActivity();
+        //redirect activity to myaccount
+        redirectActivity(this, MyAccountActivity.class);
+    }
+    public void ClickMyCart(View view){
+        //redirect activity to mycart
+        redirectActivity(this, MyCartActivity.class);
+    }
+    public void ClickMyOrder(View view){
+        //redirect to click my order
+        redirectActivity(this, MyOrderActivity.class);
+    }
+    public void ClickCustomerService(View view){
+        //redirect to customer service
+        redirectActivity(this, CustomerServiceActivity.class);
+    }
+    public void ClickFaq(View view){
+        //redirect to faq
+        redirectActivity(this, FaqActivity.class);
     }
 
-    private static void redirectActivity(Activity activity, Class aclass) {
+    public static void redirectActivity(Activity activity, Class aClass) {
+        //initialze intent
+        Intent intent = new Intent(activity, aClass);
+        //set flag
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //start activity
+        activity.startActivity(intent);
 
     }
-    public void ClickMyCart(){
-        redirectActivity();
-    }
-    public void MyOrder(){
-        redirectActivity();
-    }
-    public void ClickCustomeCare(){
-        redirectActivity();
-    }
-    public void ClickFaq(){
-        redirectActivity();
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //close drawer
+        closeDrawer(drawerLayout);
     }
 }

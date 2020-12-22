@@ -1,29 +1,30 @@
-<?xml version="1.0" encoding="utf-8"    ?>
-
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".ProductListActivity"
-    android:orientation="vertical">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".FaqActivity">
 
-    <include
-        layout="@layout/main_toolbar"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:orientation="vertical">
 
+        <include
+            layout="@layout/main_toolbar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="FAQ"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="300dp"
         android:layout_height="match_parent"
@@ -34,8 +35,5 @@
             layout="@layout/main_nav_drawer"/>
 
     </RelativeLayout>
-</LinearLayout>
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
