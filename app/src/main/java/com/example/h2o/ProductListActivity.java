@@ -45,11 +45,23 @@ public class ProductListActivity extends AppCompatActivity {
     public void ClickHome(View view){
         recreate();
     }
-    public void ClickDashboard(View view){
+    public void ClickMyAccount(View view){
         redirectActivity();
     }
 
     private static void redirectActivity(Activity activity, Class aclass) {
 
+    }
+    public void ClickMyCart(){
+        redirectActivity();
+    }
+    public void MyOrder(){
+        redirectActivity();
+    }
+    public void ClickCustomeCare(){
+        redirectActivity();
+    }
+    public void ClickFaq(){
+        redirectActivity();
     }
 }
