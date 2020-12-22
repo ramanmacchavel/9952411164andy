@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailsActivity"
+    android:orientation="vertical">
+
+
+  <include
+      layout="@layout/main_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/R_l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+         android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/l_t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imageView2"
+            android:text="aquanza" />
+
+        <TextView
+            android:id="@+id/l_t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l_t1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imageView2"
+            android:text="aquanza water" />
+
+        <CheckBox
+            android:id="@+id/OneLitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView2"
+            android:layout_marginLeft="10dp"
+            android:text="1-Litter" />
+
+
+        <Button
+            android:id="@+id/btn_OneLitterLess"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView2"
+            android:layout_toLeftOf="@id/txt_OneLitterCount"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/txt_OneLitterCount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView2"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btn_OneLitterAdd"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_OneLitterAdd"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView2"
+            android:layout_alignParentRight="true"
+            android:text="+" />
+
+        <CheckBox
+            android:id="@+id/TwoLitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OneLitter"
+            android:layout_marginLeft="10dp"
+            android:text="2-Litter" />
+
+        <Button
+            android:id="@+id/btn_TwoLitterLess"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_OneLitterLess"
+            android:layout_toLeftOf="@id/txt_OneLitterCount"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/txt_TwoLitterCount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_OneLitterCount"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btn_TwoLitterAdd"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_TwoLitterAdd"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_OneLitterAdd"
+            android:layout_alignParentRight="true"
+            android:text="+" />
+
+        <CheckBox
+            android:id="@+id/FiveLitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TwoLitter"
+            android:layout_marginLeft="10dp"
+            android:text="5-Litter" />
+
+        <Button
+            android:id="@+id/btn_FiveLitterLess"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_TwoLitterLess"
+            android:layout_toLeftOf="@id/txt_OneLitterCount"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/txt_FiveLitterCount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_TwoLitterCount"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btn_FiveLitterAdd"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_FiveLitterAdd"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_TwoLitterAdd"
+            android:layout_alignParentRight="true"
+            android:text="+" />
+
+        <CheckBox
+            android:id="@+id/TwentyLitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FiveLitter"
+            android:layout_marginLeft="10dp"
+            android:text="20-Litter" />
+
+        <Button
+            android:id="@+id/btn_TwentyLitterLess"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_FiveLitterLess"
+            android:layout_toLeftOf="@id/txt_OneLitterCount"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/txt_TwentyLitterCount"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_FiveLitterCount"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@id/btn_FiveLitterAdd"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btn_TwentyLitterAdd"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_FiveLitterAdd"
+            android:layout_alignParentRight="true"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btn_AddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TwentyLitter"
+            android:layout_toLeftOf="@id/btn_CheckOut"
+            android:layout_marginTop="20dp"
+            android:text="Add to cart" />
+
+        <Button
+            android:id="@+id/btn_CheckOut"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TwentyLitter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="checkout" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
